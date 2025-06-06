@@ -238,7 +238,7 @@ comment-token = "#"
 language-servers = ["pyright", "ruff", "pylyzer"]
 indent = { tab-width = 4, unit = "    " }
 
-[[language.formatter]]
+[language.formatter]
 command = "black"
 args = ["--quiet", "-"]
 
@@ -250,6 +250,10 @@ config = {}
 [language-server.ruff]
 command = "ruff"
 args = ["server", "--preview"]
+
+[language-server.pylyzer]
+command = "pylyzer"
+args = ["--server"]
 ```
 
 Create `~/.config/helix/language.toml` with the following content:
@@ -724,6 +728,13 @@ pip install --upgrade ruff black
 # Rebuild grammar files
 hx --grammar fetch
 hx --grammar build
+
+# Manual setup if needed
+mkdir -p ~/.config/helix/runtime/queries/python
+cd ~/.config/helix/runtime/queries/python
+curl -O https://raw.githubusercontent.com/helix-editor/helix/master/runtime/queries/python/highlights.scm
+curl -O https://raw.githubusercontent.com/helix-editor/helix/master/runtime/queries/python/indents.scm
+curl -O https://raw.githubusercontent.com/helix-editor/helix/master/runtime/queries/python/textobjects.scm
 ```
 
 ### Python Execution Issues
