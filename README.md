@@ -78,6 +78,17 @@ Should show:
 - ✓ Textobject queries
 - ✓ Indent queries
 
+### Optional Theme
+```bash
+cd /tmp
+
+git clone https://github.com/gokayburuc/helix-themes.git
+cd helix-themes
+
+mkdir ~/.config/helix/themes
+cp *.toml ~/.config/helix/themes/
+```
+
 ## Configuration
 
 ### Complete Helix Configuration File
@@ -88,7 +99,7 @@ Create `~/.config/helix/config.toml` with the following content:
 # ~/.config/helix/config.toml
 # Optimized for Competitive Programming in Python
 
-theme = "onedark"
+theme = "low-eye-strain"
 
 [editor]
 line-number = "relative"  # Easier navigation
@@ -255,6 +266,27 @@ config = {}
 [language-server.ruff]
 command = "ruff"
 args = ["server", "--preview"]
+```
+
+Create `~/.config/helix/language.toml` with the following content:
+
+```toml
+# ~/.config/helix/language.toml
+[[language]]
+name = "python"
+language-servers = ["pyright", "ruff", "pylyzer"]
+auto-format = true
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+[language-server.pylyzer]
+command = "pylyzer"
+args = ["--server"]
+[language.formatter]
+command = "black"
+args = ["-"]
 ```
 
 ## Template Files
