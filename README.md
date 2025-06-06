@@ -235,7 +235,7 @@ file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc"]
 shebangs = ["python", "python3"]
 roots = ["pyproject.toml", "setup.py", "Poetry.lock", "Pipfile", "requirements.txt"]
 comment-token = "#"
-language-servers = ["pyright", "ruff", "pylyzer"]
+language-servers = ["pyright", "ruff"]
 indent = { tab-width = 4, unit = "    " }
 
 [language.formatter]
@@ -250,10 +250,6 @@ config = {}
 [language-server.ruff]
 command = "ruff"
 args = ["server", "--preview"]
-
-[language-server.pylyzer]
-command = "pylyzer"
-args = ["--server"]
 ```
 
 Create `~/.config/helix/language.toml` with the following content:
