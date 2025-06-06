@@ -169,7 +169,7 @@ smart-case = true
 wrap-around = true
 
 [editor.whitespace]
-render = "selection"
+render = "all"
 characters = { space = "·", nbsp = "⍽", tab = "→", newline = "⏎" }
 
 [editor.indent-guides]
@@ -184,7 +184,7 @@ skip-levels = 1
 "C-q" = ":quit"
 
 # Fast compilation and execution
-"space" = { "r" = ":sh python3 solution.py", "t" = ":sh python3 solution.py < input.txt", "c" = ":sh python3 -m py_compile solution.py", "d" = ":sh python3 -m pdb solution.py", "o" = ":sh python3 solution.py > output.txt", "b" = ":sh python3 solution.py < input.txt > output.txt"}
+"space" = { "r" = ":sh python3 solution.py", "t" = ":sh python3 solution.py < input.txt", "c" = ":sh python3 -m py_compile solution.py", "d" = ":sh python3 -m pdb solution.py", "o" = ":sh python3 solution.py > output.txt", "b" = ":sh python3 solution.py < input.txt > output.txt" }
 
 # Quick navigation and editing
 "C-h" = "jump_backward"
@@ -198,8 +198,8 @@ skip-levels = 1
 
 # Terminal and splits
 "C-t" = ":sh"
-"\\" = ":vsplit"
-"-" = ":hsplit"
+"C-\\" = ":vsplit"
+"C-_" = ":hsplit"
 
 # Quick commenting (for debugging)
 "C-/" = "toggle_comments"
@@ -227,8 +227,6 @@ skip-levels = 1
 "V" = "extend_line_below"
 
 # Language-specific settings
-[languages]
-
 [[language]]
 name = "python"
 scope = "source.python"
@@ -237,9 +235,8 @@ file-types = ["py", "pyi", "py3", "pyw", ".pythonstartup", ".pythonrc"]
 shebangs = ["python", "python3"]
 roots = ["pyproject.toml", "setup.py", "Poetry.lock", "Pipfile", "requirements.txt"]
 comment-token = "#"
-language-servers = ["pyright", "ruff"]
+language-servers = ["pyright", "ruff", "pylyzer"]
 indent = { tab-width = 4, unit = "    " }
-formatter = { command = "black", args = ["--quiet", "-"] }
 
 [[language.formatter]]
 command = "black"
