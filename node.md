@@ -1,11 +1,15 @@
-installation
+# Helix JavaScript/TypeScript Setup
+
+## Installation
 
 ```bash
 npm install -g typescript typescript-language-server
 npm install -g prettier
 ```
 
-update `~/.config/helix/language.toml`
+## Configuration
+
+Update `~/.config/helix/language.toml`:
 
 ```toml
 [[language]]
