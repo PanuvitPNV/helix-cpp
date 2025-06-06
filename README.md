@@ -273,6 +273,25 @@ command = "black"
 args = ["-"]
 ```
 
+Edit `~/.tmux.conf`
+
+```conf
+# Enable 24-bit truecolor support
+set -g default-terminal "tmux-256color"
+set-option -ga terminal-overrides ",xterm-256color:RGB"
+
+# Fix for TERM inside tmux (for Helix, Neovim, etc.)
+set -as terminal-overrides ',*:Tc'
+
+# Improve scrolling (optional but recommended)
+set -g mouse on
+setw -g mode-keys vi
+```
+
+```bash
+tmux kill-server
+tmux
+```
 ## Template Files
 
 ### 1. Basic Competitive Programming Template
