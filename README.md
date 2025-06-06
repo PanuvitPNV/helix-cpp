@@ -184,25 +184,12 @@ skip-levels = 1
 "C-q" = ":quit"
 
 # Fast compilation and execution
-"space" = { 
-    "r" = ":sh python3 solution.py", 
-    "t" = ":sh python3 solution.py < input.txt", 
-    "c" = ":sh python3 -m py_compile solution.py", 
-    "d" = ":sh python3 -m pdb solution.py", 
-    "o" = ":sh python3 solution.py > output.txt",
-    "b" = ":sh python3 solution.py < input.txt > output.txt"
-}
+"space" = { "r" = ":sh python3 solution.py", "t" = ":sh python3 solution.py < input.txt", "c" = ":sh python3 -m py_compile solution.py", "d" = ":sh python3 -m pdb solution.py", "o" = ":sh python3 solution.py > output.txt", "b" = ":sh python3 solution.py < input.txt > output.txt"}
 
 # Quick navigation and editing
 "C-h" = "jump_backward"
 "C-l" = "jump_forward"
-"g" = { 
-    "h" = "goto_line_start", 
-    "l" = "goto_line_end", 
-    "s" = "goto_first_nonwhitespace", 
-    "g" = "goto_file_start", 
-    "e" = "goto_last_line" 
-}
+"g" = { "h" = "goto_line_start", "l" = "goto_line_end", "s" = "goto_first_nonwhitespace", "g" = "goto_file_start", "e" = "goto_last_line" }
 
 # Fast selection and manipulation
 "V" = "extend_line_below"
