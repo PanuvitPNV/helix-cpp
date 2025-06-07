@@ -9,7 +9,7 @@ npm install -g prettier
 
 ## Configuration
 
-Update `~/.config/helix/language.toml`:
+Update `~/.config/helix/languages.toml`:
 
 ```toml
 [[language]]
