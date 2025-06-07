@@ -329,7 +329,10 @@ def read_str():
     return input().strip()
 
 def read_strs():
-    return input().strip().split()
+    s = input().strip()
+    if " " in s:
+        return s.split()
+    return list(s)
 
 def solve():
     """
@@ -337,16 +340,16 @@ def solve():
     Implement your logic here
     """
     # Example: Read number of elements
-    n = read_int()
+    # n = read_int()
     
     # Example: Read array
-    arr = read_ints()
+    # arr = read_ints()
     
     # Your solution logic here
-    result = 0
+    # result = 0
     
     # Output result
-    print(f"{result}\n")
+    # print(f"{result}\n")
 
 def main():
     """
