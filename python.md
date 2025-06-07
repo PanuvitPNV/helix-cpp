@@ -252,7 +252,7 @@ command = "ruff"
 args = ["server", "--preview"]
 ```
 
-Create `~/.config/helix/language.toml` with the following content:
+Create `~/.config/helix/languages.toml` with the following content:
 
 ```toml
 # ~/.config/helix/language.toml
