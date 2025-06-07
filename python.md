@@ -184,7 +184,7 @@ skip-levels = 1
 "C-q" = ":quit"
 
 # Fast compilation and execution
-"space" = { "r" = ":sh python3 solution.py", "t" = ":sh python3 solution.py < input.txt", "c" = ":sh python3 -m py_compile solution.py", "d" = ":sh python3 -m pdb solution.py", "o" = ":sh python3 solution.py > output.txt", "b" = ":sh python3 solution.py < input.txt > output.txt" }
+"space" = { "r" = ":sh python3 solution.py", "t" = ":sh python3 solution.py < input.txt", "c" = ":sh python3 -m py_compile solution.py", "d" = ":sh python3 -m pdb solution.py", "o" = ":sh python3 solution.py > output.txt", "b" = ":sh python3 solution.py < input.txt > output.txt", "z" = ":sh cat solution.py | clip.exe" }
 
 # Quick navigation and editing
 "C-h" = "jump_backward"
