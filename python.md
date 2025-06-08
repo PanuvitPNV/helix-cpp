@@ -216,6 +216,9 @@ skip-levels = 1
 "F8" = ":sh clear && python3 solution.py"  # Clear screen and run
 "F9" = ":sh python3 -u solution.py"  # Run with unbuffered output
 
+"C-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "flip_selections" ] # Move line(s) up
+"C-down" = [ "extend_to_line_bounds", "delete_selection", "paste_after", "select_mode", "goto_line_start", "normal_mode" ] # Move line(s) down
+
 [keys.insert]
 # Quick escape
 "j" = { "k" = "normal_mode" }
