@@ -221,6 +221,26 @@ skip-levels = 1
 "j" = { "k" = "normal_mode" }
 "C-c" = "normal_mode"
 
+# Line navigation
+"C-a" = "goto_line_start"      # Go to beginning of line
+"C-e" = "goto_line_end"        # Go to end of line (alternative)
+"C-0" = "goto_line_start"      # Alternative home key
+"C-$" = "goto_line_end"        # Alternative end key
+
+# Quick deletion
+"C-u" = "kill_to_line_start"   # Delete from cursor to line start
+"C-k" = "kill_to_line_end"     # Delete from cursor to line end
+"C-d" = "delete_char_forward"  # Delete character forward
+"C-b" = "delete_char_backward" # Delete character backward
+
+# Quick save without leaving insert mode
+"C-s" = ":write"               # Save file while staying in insert
+
+# Undo/Redo without leaving insert mode
+"C-z" = "undo"                 # Undo last change
+"C-y" = "redo"                 # Redo last undone change
+"C-r" = "redo"                 # Alternative redo (common in many editors)
+
 [keys.select]
 # Fast selection manipulation
 "C-c" = "normal_mode"
